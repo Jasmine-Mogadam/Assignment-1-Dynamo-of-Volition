@@ -2,7 +2,6 @@ from dynamic_scope import get_dynamic_re
 from typing import Any
 import unittest
 
-
 class Test_get_dynamic_re(unittest.TestCase):
     def test_simple_nameerror(self):
         re = get_dynamic_re()
@@ -56,8 +55,8 @@ class Test_get_dynamic_re(unittest.TestCase):
         a = "module_a"
         b = "module_b"
         c = "module_c"
-        d = "module_d"
-        e = "module_e"
+        d = "prevent UnboundLocalError"
+        e = "prevent UnboundLocalError"
 
         inner3_ref = outer()
         dre = inner3_ref("module_parameter_d")
